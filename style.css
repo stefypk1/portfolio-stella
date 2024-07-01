@@ -26,13 +26,13 @@ header{
     transition: 0.3s ease;
 }
 .logo:hover{
-    color: orangered;
-    text-shadow: 0 0 25px orangered,
-                 0 0 50px orangered;
+    color: rgb(153, 255, 153);
+    text-shadow: 0 0 25px rgb(153, 255, 153),
+                 0 0 50px rgb(153, 255, 153);
     transform: scale(1.1);
 }
 span{
-    color: orangered;
+    color: rgb(153, 255, 153);
 }
 .navbar a{
     font-size: 14px;
@@ -43,8 +43,8 @@ span{
     transition: 0.3s ease;
 }
 .navbar a:hover,.navbar a:active{
-    color: orangered;
-    border-bottom: 3px solid orangered;
+    color: rgb(153, 255, 153);
+    border-bottom: 3px solid rgb(153, 255, 153);
     
 }
 .contact{
@@ -59,8 +59,8 @@ span{
     transition: 0.3s ease;
 }
 .contact:hover{
-    background-color: orangered;
-    box-shadow: 0 0 25px orangered;
+    background-color: rgb(153, 255, 153);
+    box-shadow: 0 0 25px rgb(153, 255, 153);
     color: white;
 }
 .home{
@@ -112,7 +112,7 @@ span{
 }
 .btn-2{
     padding: 15px 28px;
-    background-color: orangered;
+    background-color: rgb(153, 255, 153);
     color: white;
     border: 2px solid black;
     border-radius: 8px;
@@ -124,7 +124,7 @@ span{
 }
 .btn-2:hover{
     background-color: white;
-    color: orangered;
+    color: rgb(153, 255, 153);
 }
 .img-box {
     overflow: hidden; /* Masquer le dépassement de l'image */
@@ -152,8 +152,8 @@ span{
 .about-img img{
     position: relative;
     width: 200px;
-    box-shadow: 0 0 25px orangered,
-                0 0 50px orangered;
+    box-shadow: 0 0 25px rgb(153, 255, 153),
+                0 0 50px rgb(153, 255, 153);
     border-radius: 50%;
 }
 .about-content h2{
@@ -213,20 +213,20 @@ span{
 .footer .social a{
     font-size: 24px;
     color: white;
-    border: 2px solid orangered;
+    border: 2px solid rgb(153, 255, 153);
     width: 40px;
     height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
     margin: 0 8px;
-    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    box-shadow: inset 0 0 10px rgb(153, 255, 153), 0 0 10px rgb(153, 255, 153);
     transition: 0.3s ease;
 }
 .footer .social a:hover{
     transform: scale(1.2)translateY(-10px);
-    color: orangered;
-    border: 2px solid orangered;
+    color: rgb(153, 255, 153);
+    border: 2px solid rgb(153, 255, 153);
 }
 .footer ul{
     margin-top: 0;
@@ -242,7 +242,7 @@ span{
     transition: 0.3s ease;
 }
 .footer ul li a:hover{
-    border-bottom: 3px solid orangered;
+    border-bottom: 3px solid rgb(153, 255, 153);
 }
 .footer ul li{
     display: inline-block;
@@ -269,7 +269,7 @@ span{
 .pdf-container .btn-2 {
     display: inline-block;
     padding: 10px 28px;
-    background-color: orangered;
+    background-color: rgb(153, 255, 153);
     color: white;
     border: 2px solid black;
     border-radius: 8px;
@@ -284,5 +284,5 @@ span{
 
 .pdf-container .btn-2:hover {
     background-color: white;
-    color: orangered;
+    color: rgb(153, 255, 153);
 }
