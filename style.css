@@ -64,8 +64,10 @@ span{
     color: white;
 }
 .home{
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     background: rgb(241, 241, 241);
     display: flex;
     align-items: center;
@@ -124,10 +126,17 @@ span{
     background-color: white;
     color: orangered;
 }
-.img-box img{
-    border-radius: 50%;
-    width: 200px;
-}
+.img-box {
+    overflow: hidden; /* Masquer le dépassement de l'image */
+    margin-right: 20px; /* Définir la marge souhaitée en pixels */
+  }
+  
+  .img-box img {
+    border-radius: 50%; /* Utiliser 50% pour un cercle parfait */
+    width: 300px; /* Ajuster la largeur selon vos besoins */
+    height: 300px; /* Ajuster la hauteur selon vos besoins */
+  }
+  
 ::-webkit-scrollbar-track{
     background-color: rgba(0, 0, 0, 0.6);
     width: 50px;
