@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="boxicons-2.1.4/css/animations.css">
+  <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.css">
+  <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="boxicons-2.1.4/css/transformations.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  </style>
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio de Tchaga Fredy Stella, un développeur junior frontend et backend.">
+  <meta name="keywords" content="Tchaga Fredy Stella, portfolio, développeur frontend, développeur backend, Douala Institute Technologies">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo"><span>FRED</span>DY</a>
+  </header>
+  <section class="contact-form" id="contact">
+    <h2 class="contact-me">Contactez <span>Moi</span></h2>
+
+    <form action="#" id="contactForm">
+      <div class="input-box">
+        <input type="text" id="name" placeholder="Nom complet">
+        <span id="nameError" class="error-message"></span><br>
+        <input type="email" id="email" placeholder="Email">
+        <span id="emailError" class="error-message"></span><br>
+        <input type="text" id="subject" placeholder="Objet">
+        <span id="subjectError" class="error-message"></span><br>
+        <textarea name="" cols="30" rows="10" id="message" placeholder="Votre message"></textarea>
+      </div>
+      <input type="submit" value="Envoyer un message" class="btn-1">
+      <p id="successMessage" class="success-message"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.facebook.com/fredyharper" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+      <a href="https://www.linkedin.com/in/fredy-stella-tchaga-847a26252"><i class="bx bxl-linkedin-square"></i></a>
+      <a href="https://www.instagram.com/fredy_harper?igsh=MWNqNHhnMWdzbDVkeQ=="><i class="bx bxl-instagram-alt"></i></a>
+    </div>
+    <ul class="list">
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Politique de confidentialité</a></li>
+    </ul>
+    <p class="copyright">&copy; 2024 Fredy Stella Tchaga | Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const subjectError = document.getElementById('subjectError');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche la soumission du formulaire par défaut
+
+      let isValid = true;
+
+      // Validation du nom
+      if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Veuillez saisir votre nom.';
+        isValid = false;
+      } else {
+        nameError.textContent = '';
+      }
+
+      // Validation de l'email (vérification basique du format)
+      const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.textContent = 'Veuillez saisir une adresse email valide.';
+        isValid = false;
+      } else {
+        emailError.textContent = '';
+      }
+
+      // Validation de l'objet
+      if (subjectInput.value.trim() === '') {
+        subjectError.textContent = 'Veuillez saisir l\'objet de votre message.';
+        isValid = false;
+      } else {
+        subjectError.textContent = '';
+      }
+
+      // Si toutes les validations passent, afficher le message de succès
+      if (isValid) {
+        successMessage.textContent = 'Votre message a été envoyé avec succès!';
+        form.reset(); // Réinitialise les champs du formulaire
+      } else {
+        successMessage.textContent = '';
+      }
+    });
+
+    // Optionnel : Réinitialiser les messages d'erreur lors de la modification des entrées
+    nameInput.addEventListener('input', function() {
+      nameError.textContent = '';
+    });
+
+    emailInput.addEventListener('input', function() {
+      emailError.textContent = '';
+    });
+
+    subjectInput.addEventListener('input', function() {
+      subjectError.textContent = '';
+    });
+  </script>
+</body>
+
+</html>
