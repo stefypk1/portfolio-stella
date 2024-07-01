@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boxicons-2.1.4/css/animations.css">
+    <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.css">
+    <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="boxicons-2.1.4/css/transformations.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <meta name="description" content="Portfolio de Tchaga Fredy Stella, un développeur junior frontend et backend.">
+    <meta name="keywords" content="Tchaga Fredy Stella, portfolio, développeur frontend, développeur backend, Douala Institute Technologies">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>FRED</span>DY</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Portfolio</a>
+        </nav>
+        <a href="#" class="contact">Contactez-moi</a>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Salut</h3>
+            <h1>Je me nomme <span>Tchaga Fredy Stella</span>, développeur frontend et backend junior</h1>
+            <p>Étudiant en 3ème année de la branche génie logiciel à Douala Institute Technologies. Je vous souhaite la bienvenue sur mon portfolio.</p>
+            <div class="btn-box">
+                <button class="btn-2">Expérience</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="pp.jpg" alt="Photo de Tchaga Fredy Stella">
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-img">
+            <img src="pp.jpg" alt="Photo de Tchaga Fredy Stella">
+        </div>
+        <div class="about-content">
+            <h2 class="heading"><span>Expérience</span></h2>
+            <h3>Développeur <span>frontend et backend junior</span></h3>
+            <p>Durant ma formation, j'ai déjà eu à créer un formulaire d'inscription et de connexion développé en HTML, CSS, PHP relié à une base de données MySQL. J'ai aussi créé un masque d'enregistrement et de collecte de données relié à une base de données Excel, tout ceci grâce à VBA.</p>
+            <a href="#" class="btn-2">Expérience</a>
+            <button onclick="loadPdf()" class="btn-2">Charger le CV PDF</button>
+            <iframe id="pdfViewer" src="" width="50%" height="400">Votre navigateur ne supporte pas les iframes</iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/fredyharper" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+        <p class="copyright">&copy; 2024 Fredy Stella Tchaga | Tous droits réservés</p>
+    </footer>
+    <script>
+        function loadPdf() {
+            var pdfUrl = 'cv_Stella_new.pdf'; // Assurez-vous que ce chemin est correct
+            document.getElementById('pdfViewer').src = pdfUrl;
+        }
+    </script>
+</body>
+</html>
