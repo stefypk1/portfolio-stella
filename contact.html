@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="boxicons-2.1.4/css/transformations.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  </style>
   <title>Portfolio</title>
   <meta name="description" content="Portfolio de Tchaga Fredy Stella, un développeur junior frontend et backend.">
   <meta name="keywords" content="Tchaga Fredy Stella, portfolio, développeur frontend, développeur backend, Douala Institute Technologies">
@@ -24,11 +31,11 @@
     <form action="#" id="contactForm">
       <div class="input-box">
         <input type="text" id="name" placeholder="Nom complet">
-        <span id="nameError" class="error-message"></span>
+        <span id="nameError" class="error-message"></span><br>
         <input type="email" id="email" placeholder="Email">
-        <span id="emailError" class="error-message"></span>
+        <span id="emailError" class="error-message"></span><br>
         <input type="text" id="subject" placeholder="Objet">
-        <span id="subjectError" class="error-message"></span>
+        <span id="subjectError" class="error-message"></span><br>
         <textarea name="" cols="30" rows="10" id="message" placeholder="Votre message"></textarea>
       </div>
       <input type="submit" value="Envoyer un message" class="btn-1">
@@ -48,6 +55,7 @@
     </ul>
     <p class="copyright">&copy; 2024 Fredy Stella Tchaga | Tous droits réservés</p>
   </footer>
+
   <script>
     const form = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
@@ -72,46 +80,45 @@
         nameError.textContent = '';
       }
 
-      
-        // Validation for Email (basic format check)
-        const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-          emailError.textContent = 'Veuillez saisir une adresse email valide. (Exemple: test@mail.com)';
-          isValid = false;
-        } else {
-          emailError.textContent = '';
-        }
-
-        // Validation for Subject
-        if (subjectInput.value.trim() === '') {
-          subjectError.textContent = 'Veuillez saisir l\'objet de votre message.';
-          isValid = false;
-        } else {
-          subjectError.textContent = '';
-        }
-
-        // If all validations pass, show success message
-        if (isValid) {
-          successMessage.textContent = 'Votre message a été envoyé avec succès!';
-          form.reset(); // Reset form fields
-        } else {
-          successMessage.textContent = '';
-        }
-      });
-
-      // Optional: Reset error messages on input change
-      nameInput.addEventListener('input', function() {
-        nameError.textContent = '';
-      });
-
-      emailInput.addEventListener('input', function() {
+      // Validation for Email (basic format check)
+      const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.textContent = 'Veuillez saisir une adresse email valide.';
+        isValid = false;
+      } else {
         emailError.textContent = '';
-      });
+      }
 
-      subjectInput.addEventListener('input', function() {
+      // Validation for Subject
+      if (subjectInput.value.trim() === '') {
+        subjectError.textContent = 'Veuillez saisir l\'objet de votre message.';
+        isValid = false;
+      } else {
         subjectError.textContent = '';
-      });
-    </script>
-  </body>
+      }
+
+      // If all validations pass, show success message
+      if (isValid) {
+        successMessage.textContent = 'Votre message a été envoyé avec succès!';
+        form.reset(); // Reset form fields
+      } else {
+        successMessage.textContent = '';
+      }
+    });
+
+    // Optional: Reset error messages on input change
+    nameInput.addEventListener('input', function() {
+      nameError.textContent = '';
+    });
+
+    emailInput.addEventListener('input', function() {
+      emailError.textContent = '';
+    });
+
+    subjectInput.addEventListener('input', function() {
+      subjectError.textContent = '';
+    });
+  </script>
+</body>
+
 </html>
-    
