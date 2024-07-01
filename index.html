@@ -44,7 +44,7 @@
             <h3>Développeur <span>frontend et backend junior</span></h3>
             <p>Durant ma formation, j'ai déjà eu à créer un formulaire d'inscription et de connexion développé en HTML, CSS, PHP relié à une base de données MySQL. J'ai aussi créé un masque d'enregistrement et de collecte de données relié à une base de données Excel, tout ceci grâce à VBA.</p>
             <a href="#" class="btn-2">Expérience</a>
-            <button onclick="downloadPdf()" class="btn-2">Télécharger le CV en PDF</button>
+            <a href="cv_Stella_new.pdf" download="cv_Stella_Tchaga.pdf" class="btn-2">Télécharger le CV en PDF</a>
             <iframe id="pdfViewer" src="cv_Stella_new.pdf" width="50%" height="400">Votre navigateur ne supporte pas les iframes</iframe>
         </div>
     </section>
@@ -63,10 +63,7 @@
         <p class="copyright">&copy; 2024 Fredy Stella Tchaga | Tous droits réservés</p>
     </footer>
     <script>
-        function downloadPdf() {
-            var pdfUrl = 'cv_Stella_new.pdf';
-            window.open(pdfUrl, '_blank');
-        }
+        // La fonction de téléchargement n'est plus nécessaire car le lien d'ancrage gère le téléchargement
     </script>
 </body>
 </html>
