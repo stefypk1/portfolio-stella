@@ -26,7 +26,7 @@
     <a href="index.html" class="logo"><span>FRED</span>DY</a>
   </header>
   <section class="contact-form" id="contact">
-    <h2 class="contact-me">Contact <span>Me</span></h2>
+    <h2 class="contact-me">Contactez <span>Moi</span></h2>
 
     <form action="#" id="contactForm">
       <div class="input-box">
@@ -68,11 +68,11 @@
     const successMessage = document.getElementById('successMessage');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
+      event.preventDefault(); // Empêche la soumission du formulaire par défaut
 
       let isValid = true;
 
-      // Validation for Name
+      // Validation du nom
       if (nameInput.value.trim() === '') {
         nameError.textContent = 'Veuillez saisir votre nom.';
         isValid = false;
@@ -80,7 +80,7 @@
         nameError.textContent = '';
       }
 
-      // Validation for Email (basic format check)
+      // Validation de l'email (vérification basique du format)
       const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
       if (!emailRegex.test(emailInput.value.trim())) {
         emailError.textContent = 'Veuillez saisir une adresse email valide.';
@@ -89,7 +89,7 @@
         emailError.textContent = '';
       }
 
-      // Validation for Subject
+      // Validation de l'objet
       if (subjectInput.value.trim() === '') {
         subjectError.textContent = 'Veuillez saisir l\'objet de votre message.';
         isValid = false;
@@ -97,16 +97,16 @@
         subjectError.textContent = '';
       }
 
-      // If all validations pass, show success message
+      // Si toutes les validations passent, afficher le message de succès
       if (isValid) {
         successMessage.textContent = 'Votre message a été envoyé avec succès!';
-        form.reset(); // Reset form fields
+        form.reset(); // Réinitialise les champs du formulaire
       } else {
         successMessage.textContent = '';
       }
     });
 
-    // Optional: Reset error messages on input change
+    // Optionnel : Réinitialiser les messages d'erreur lors de la modification des entrées
     nameInput.addEventListener('input', function() {
       nameError.textContent = '';
     });
