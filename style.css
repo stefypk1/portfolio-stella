@@ -75,6 +75,7 @@ span{
     padding: 30px 12px 0;
 }
 .home-content{
+    margin-top: 80px;
     max-width: 800px;
 }
 .home-content h3{
@@ -127,6 +128,7 @@ span{
     color: rgb(153, 255, 153);
 }
 .img-box {
+    margin-top: 100px;
     overflow: hidden; /* Masquer le dépassement de l'image */
     margin-right: 20px; /* Définir la marge souhaitée en pixels */
   }
